@@ -8,6 +8,7 @@ namespace ChinookSystem.Data.POCOs
 {
     public class ArtistAlbum
     {
+        public string Name { get; set; }
         public string Title { get; set; }
         public int TotalTracksforAlbum { get; set; }
         public decimal TotalPriceForalbumtracks { get; set; }
