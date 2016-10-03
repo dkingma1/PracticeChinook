@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+#region Additional Namespaces
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+#endregion
+
 namespace ChinookSystem.Data.Entities
 {
     public class Customer
@@ -19,6 +24,7 @@ namespace ChinookSystem.Data.Entities
         public string Phone { get; set; }
         public string Fax { get; set; }
         public string Email { get; set; }
+        [ForeignKey("Employee")]
         public int SupportRepId { get; set; }
 
         public virtual Employee Employee  { get; set; }

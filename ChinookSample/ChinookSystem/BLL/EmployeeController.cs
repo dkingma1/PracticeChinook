@@ -14,13 +14,13 @@ using ChinookSystem.DAL;
 namespace ChinookSystem.BLL
 {
     [DataObject]
-    public class CustomerController
+    public class EmployeeController
     {
-        public List<RepresentativeCustomers> RepresentativeCustomers_Get(int employeeId)
+        public List<EmployeeNameList> EmployeeNameList_Get()
         {
             using (var context = new ChinookContext())
             {
-                var results = from x in context.Customers where x.SupportRepId == employeeId orderby x.LastName, x.FirstName select new RepresentativeCustomers { Name = x.LastName + ", " + x.FirstName, City = x.City, State = x.State, Phone = x.Phone, Email = x.Email };
+                var results = from x in context.Employees orderby x.LastName, x.FirstName select new EmployeeNameList { EmployeeId = x.EmployeeId, Name = x.LastName + ", " + x.FirstName };
                 return results.ToList();
             }
         }
