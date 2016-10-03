@@ -36,12 +36,13 @@ namespace ChinookSystem.BLL
             {
                 //where bringing over a query from LinqPad you must change the reference(s) to the data source
                 //you may also need to change your navigation refrencing used in LinqPad to the navigation properties you stated in the entity class definitions
-                var results = from x in context.Albums where x.ReleaseYear == 2008 orderby x.Artists.Name, x.Title select new ArtistAlbum { Name = x.Artists.Name, Title = x.Title };
+                var results = from x in context.Albums where x.ReleaseYear == 2008 orderby x.Artist.Name, x.Title select new ArtistAlbum { Name = x.Artist.Name, Title = x.Title };
                 //the following requires the query data in memory
                 // .ToList()
                 //At this point the query will actualy execute
                 return results.ToList();
             }
         }
+
     }
 }

@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Employee.cs" />
     <Compile Include="POCOs\AlbumTrack.cs" />
     <Compile Include="Entities\Album.cs" />
     <Compile Include="Entities\Artist.cs" />
@@ -50,6 +52,7 @@
     <Compile Include="POCOs\ArtistAlbum.cs" />
     <Compile Include="POCOs\CustomerContact.cs" />
     <Compile Include="POCOs\MediaTypeTrackCount.cs" />
+    <Compile Include="POCOs\RepresentativeCustomers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,6 @@ namespace ChinookSystem.Data.Entities
         //Navigation properties for use by Linq. These properties will by of type virtural
         //There are 2 types of navigation properties. Properties that point tot "children" use ICollection<T>. Properties that point to "Parent" use ParentName as the data type
         public virtual ICollection<Track> Tracks { get; set; }
-        public virtual Artist Artists { get; set; }
+        public virtual Artist Artist { get; set; }
     }
 }
