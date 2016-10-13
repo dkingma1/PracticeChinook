@@ -13,9 +13,9 @@ namespace ChinookSystem.Security
 {
     public class RoleManager : RoleManager<IdentityRole>
     {
-        public RoleManager():base(new RoleStore<IdentityRole>(new ApplicationDbContext()))
+        public RoleManager() : base(new RoleStore<IdentityRole>(new ApplicationDbContext()))
         {
-
-        } 
-    }
+            
+        }  
+    } 
 }
