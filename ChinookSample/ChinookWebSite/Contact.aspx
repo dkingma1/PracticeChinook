@@ -14,4 +14,10 @@
         <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
         <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
     </address>
+
+    <p>
+        This is the log in for the webMaster: userId = Webmaster &nbsp;&nbsp;&nbsp; Password = Pa$$word1
+    </p>
+    <h2>Remeber to remove these lines BEFORE production</h2>
+
 </asp:Content>

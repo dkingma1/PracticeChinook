@@ -49,11 +49,13 @@
                     <a class="navbar-brand" runat="server" href="~/">Linq to Entity Queries</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <%--<ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>--%>
+                        <li><a runat="server" href="~/Pages/FirstSample">FirstSample</a></li>
+                        <li><a runat="server" href="~/Queries/RepresentativeCustomers">RepCustomers</a></li>
+                    </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
@@ -70,7 +72,7 @@
                             </ul>
                         </LoggedInTemplate>
                     </asp:LoginView>
-                    <asp:Menu ID="NavMenu" runat="server"
+                    <%--<asp:Menu ID="NavMenu" runat="server"
                          BackColor="#000000" BorderColor="Red"
                          StaticMenuItemStyle-ForeColor="#999999"
                          StaticMenuItemStyle-VerticalPadding="10px"
@@ -88,7 +90,7 @@
                             <%-- a root menu item can also have an external
                                 closing tag but NO nested MenutItems --%>
                             <asp:MenuItem Text="FirstSample" NavigateUrl="~/Page3"></asp:MenuItem>
-                            <asp:MenuItem Text="Rep Customers" NavigateUrl="~/Queries/RepresentativeCustomers"></asp:MenuItem>
+                            <asp:MenuItem Text="Rep Customers" NavigateUrl="~/Queries/RepresentativeCustomers"></asp:MenuItem>--%>
 
                         </Items>
                     </asp:Menu>
