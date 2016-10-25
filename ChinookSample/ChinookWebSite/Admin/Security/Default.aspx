@@ -23,6 +23,9 @@
                 </div> 
 
 
+
+
+
                 <!-- Role tab -->
                 <div class="tab-pane fade" id="roles">
                     <%--DataKeyNames comtains the considered key field that is being used in insert, update, and delete. RefreshAll will call a genaric method in my code behind that will cause the ODS sets to re-bind thier data--%>
@@ -79,9 +82,46 @@
                 </div> 
 
 
+
+
+
                 <!-- Unregistered User tab -->
                 <div class="tab-pane fade" id="unregistered">
-                    <h2>Unregistered</h2>
+                    <asp:GridView ID="UnregisteredUsersGridView" runat="server" 
+                        AutoGenerateColumns="False" 
+                        DataSourceID="UnregisteredUsersODS"
+                         DataKeyNames="Id"
+                         ItemType="ChinookSystem.Security.UnRegisteredUserProfile" OnSelectedIndexChanging="UnregisteredUsersGridView_SelectedIndexChanging">
+                        <Columns>
+                            <asp:CommandField SelectText="Register" ShowSelectButton="True"></asp:CommandField>
+                            <asp:BoundField DataField="UserType" HeaderText="UserType" SortExpression="UserType"></asp:BoundField>
+                            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName"></asp:BoundField>
+                            <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname"></asp:BoundField>
+                            <asp:TemplateField HeaderText="AssignedUserName" SortExpression="AssignedUserName">
+                                <ItemTemplate>
+                                    <asp:TextBox runat="server" Text='<%# Bind("AssignedUserName") %>' 
+                                        ID="AssignedUserName"></asp:TextBox>
+                                </ItemTemplate>
+                               
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="AssignedEmail" SortExpression="AssignedEmail">
+                                <ItemTemplate>
+                                    <asp:TextBox runat="server" Text='<%# Bind("AssignedEmail") %>' 
+                                        ID="AssignedEmail"></asp:TextBox>
+                                </ItemTemplate>
+                               
+                            </asp:TemplateField>
+
+                        </Columns>
+                        <EmptyDataTemplate>
+                            No Unregistered Users to Process.
+                        </EmptyDataTemplate>
+                    </asp:GridView>
+                    <asp:ObjectDataSource ID="UnregisteredUsersODS" runat="server" 
+                        OldValuesParameterFormatString="original_{0}" 
+                        SelectMethod="ListAllUnRegisteredUsers" 
+                        TypeName="ChinookSystem.Security.UserManager">
+                    </asp:ObjectDataSource>
                 </div> 
 
             </div>

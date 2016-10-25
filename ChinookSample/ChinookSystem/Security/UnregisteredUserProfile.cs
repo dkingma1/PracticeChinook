@@ -9,7 +9,7 @@ namespace ChinookSystem.Security
     public enum UnregisteredUserType { Undefined, Employee, Customer}
     public class UnregisteredUserProfile
     {
-        public string UserId { get; set; }      //Generated
+        public int UserId { get; set; }      //Generated
         public string UserName { get; set; }    //Collected
         public string EmailAddress { get; set; }//Collected
         public int? EmployeeId { get; set; }
